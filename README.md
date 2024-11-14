@@ -3,13 +3,20 @@
 - [Project Management](#project-management)
   - [JIRA](#jira)
   - [Confluence](#confluence)
+- [Monitoring and Data Visualisation](#monitoring-and-data-visualisation)
 
+<br>
 
 # Service Management
+Certificate for [service management](service-management/certificate.md).
+
 ## ITIL
 1.  Introduction to [ITIL](service-management/itil.md).
 
+<br>
+
 # Project Management
+Certificate for [project management](project-management/certificate.md).
 
 ## JIRA
 1. Introduction to [JIRA](project-management/jira/jira.md).
@@ -23,3 +30,7 @@
 3. Using team spaces with [Confluence](project-management/confluence/using-team-spaces.md). 
 4. Managing team spaces with [Confluence](project-management/confluence/managing-team-spaces.md).
 5. Administering [Confluence](project-management/confluence/administering-confluence.md).
+
+<br>
+
+# Monitoring and Data Visualisation
