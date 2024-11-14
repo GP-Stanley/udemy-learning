@@ -275,4 +275,15 @@ Steps:
 
 # Quiz
 
-1. 
+1. What’s the name of where you can invite users to Confluence?
+   * Atlassian Administration.
+
+2. Who can create new groups for Confluence?
+   * Administrators.
+
+3. What’s the benefit of archiving a space?
+   * Pages don't show up in search by default. 
+
+<br>
+
+
