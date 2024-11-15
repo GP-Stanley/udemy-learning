@@ -4,6 +4,8 @@
   - [JIRA](#jira)
   - [Confluence](#confluence)
 - [Monitoring and Data Visualisation](#monitoring-and-data-visualisation)
+  - [AWS Masterclass](#aws-masterclass)
+  - [Grafana](#grafana)
 
 <br>
 
@@ -34,3 +36,11 @@ Certificate for [project management](project-management/certificate.md).
 <br>
 
 # Monitoring and Data Visualisation
+## AWS Masterclass
+1. Introduction to [AWS](aws-masterclass/intro-to-aws.md).
+2. Introduction to [understanding services](aws-masterclass/understanding-services.md).
+3. Deep dive into [AWS CloudWatch](aws-masterclass/aws-cloudwatch.md). 
+4. Monitoring and alerting for [AWS EC2](aws-masterclass/monitoring-and-alerting.md). 
+
+## Grafana
+1. 
