@@ -43,4 +43,10 @@ Certificate for [project management](project-management/certificate.md).
 4. Monitoring and alerting for [AWS EC2](aws-masterclass/monitoring-and-alerting.md). 
 
 ## Grafana
-1. 
+1. Introduction to [Grafana](grafana/intro-grafana.md).
+2. What [Grafana](grafana/grafana.md) can do. 
+3. Introduction to [Prometheus](grafana/intro-prometheus.md).
+4. Prometheus as a [Service](grafana/prometheus-service.md).
+
+<br>
+
