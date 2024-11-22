@@ -6,6 +6,7 @@
   - [SSH in to Connect](#ssh-in-to-connect)
 - [For an AWS EC2 Instance](#for-an-aws-ec2-instance)
   - [Step 1: Install Docker](#step-1-install-docker)
+    - [Add Your User to the Docker Group - untested](#add-your-user-to-the-docker-group---untested)
   - [Step 2: Pull the Grafana Docker Image](#step-2-pull-the-grafana-docker-image)
   - [Step 3: Run the Grafana Container](#step-3-run-the-grafana-container)
   - [Stop the Grafana container](#stop-the-grafana-container)
@@ -34,12 +35,12 @@
   - [Visualisation Options](#visualisation-options)
   - [Data Integration and Retention](#data-integration-and-retention)
   - [Metrics and Data Sources](#metrics-and-data-sources)
-- [Section 3: Grafana OSS Setup as a Service on AWS, User and Access Provisioning.](#section-3-grafana-oss-setup-as-a-service-on-aws-user-and-access-provisioning)
+- [Grafana OSS Setup as a Service on AWS, User and Access Provisioning](#grafana-oss-setup-as-a-service-on-aws-user-and-access-provisioning)
   - [Hardware Requirements for Grafana](#hardware-requirements-for-grafana)
   - [Grafana Database](#grafana-database)
   - [Implementation Steps](#implementation-steps)
 - [Setting up EC2 Instance](#setting-up-ec2-instance)
-- [Install Grafana as a Standalone Binary](#install-grafana-as-a-standalone-binary)
+- [Install Grafana as a Standalone Binary (Amazon Image)](#install-grafana-as-a-standalone-binary-amazon-image)
   - [Make sure Grafana binary is available](#make-sure-grafana-binary-is-available)
   - [Extract and Start Grafana](#extract-and-start-grafana)
   - [Check for Grafana Server Utility](#check-for-grafana-server-utility)
@@ -60,7 +61,7 @@
   - [Important Notes](#important-notes)
   - [Teams and Organisations](#teams-and-organisations)
   - [Practical Usage](#practical-usage)
-- [Section 4: Workspace Setup, CloudWatch Integration, Workspace Handling, and Access Controls](#section-4-workspace-setup-cloudwatch-integration-workspace-handling-and-access-controls)
+- [Workspace Setup, CloudWatch Integration, Workspace Handling, and Access Controls](#workspace-setup-cloudwatch-integration-workspace-handling-and-access-controls)
 - [Grafana Workspace Setup](#grafana-workspace-setup)
   - [Steps to Set Up a Workspace](#steps-to-set-up-a-workspace)
     - [Install Grafana](#install-grafana)
@@ -71,25 +72,25 @@
 - [CloudWatch Integration](#cloudwatch-integration)
   - [Steps to Integrate CloudWatch](#steps-to-integrate-cloudwatch)
     - [Prepare AWS Credentials](#prepare-aws-credentials)
-    - [Set Up the Data Source in Grafana:](#set-up-the-data-source-in-grafana)
+    - [Set Up the Data Source in Grafana](#set-up-the-data-source-in-grafana)
     - [Create a Dashboard](#create-a-dashboard)
 - [Workspace Handling](#workspace-handling)
-  - [Key Tasks for Managing Workspaces:](#key-tasks-for-managing-workspaces)
+  - [Key Tasks for Managing Workspaces](#key-tasks-for-managing-workspaces)
     - [Dashboard Creation](#dashboard-creation)
     - [Folders](#folders)
     - [Alerts](#alerts)
     - [Team Collaboration](#team-collaboration)
 - [Access Controls](#access-controls)
-  - [Access Control Features:](#access-control-features)
+  - [Access Control Features](#access-control-features)
     - [Roles](#roles)
     - [Permissions](#permissions)
     - [Invite Users](#invite-users)
     - [SMTP Configuration (Optional)](#smtp-configuration-optional)
 - [Getting Started with Grafana SMTP Relay Configuration](#getting-started-with-grafana-smtp-relay-configuration)
   - [Common Email Providers](#common-email-providers)
-    - [Gmail:](#gmail)
-    - [Outlook/Office 365:](#outlookoffice-365)
-    - [Yahoo Mail:](#yahoo-mail)
+    - [Gmail](#gmail)
+    - [Outlook/Office 365](#outlookoffice-365)
+    - [Yahoo Mail](#yahoo-mail)
   - [Finding SMTP Server in Outlook](#finding-smtp-server-in-outlook)
     - [Open Outlook](#open-outlook)
     - [Finding SMTP Server in Other Email Clients](#finding-smtp-server-in-other-email-clients)
@@ -101,6 +102,21 @@
 - [Getting Started with Dashboarding in Grafana](#getting-started-with-dashboarding-in-grafana)
   - [Key Features of Dashboards](#key-features-of-dashboards)
 - [Node Exporter Setup for Infrastructure Monitoring through Prometheus and Grafana](#node-exporter-setup-for-infrastructure-monitoring-through-prometheus-and-grafana)
+  - [Setup Prometheus Node Exporter EC2 Instance](#setup-prometheus-node-exporter-ec2-instance)
+  - [Setting Up Node Exporter for Infrastructure Monitoring](#setting-up-node-exporter-for-infrastructure-monitoring)
+    - [Install Node Exporter](#install-node-exporter)
+      - [1. Download Node Exporter](#1-download-node-exporter)
+    - [Install Directly into EC2 Instance](#install-directly-into-ec2-instance)
+    - [Run Node Explorer](#run-node-explorer)
+    - [Configure Prometheus to Scrape Node Exporter](#configure-prometheus-to-scrape-node-exporter)
+      - [1. Edit prometheus.yml](#1-edit-prometheusyml)
+      - [2. Restart Prometheus](#2-restart-prometheus)
+      - [3. Verify in Prometheus:](#3-verify-in-prometheus)
+  - [Visualise Metrics in Grafana](#visualise-metrics-in-grafana)
+  - [Create a Dashboard for Infrastructure Monitoring](#create-a-dashboard-for-infrastructure-monitoring)
+    - [Example Created](#example-created)
+  - [Setting Up Alerts for Node Metrics](#setting-up-alerts-for-node-metrics)
+    - [Documentation](#documentation)
 
 <br>
 
@@ -130,11 +146,10 @@ Source: https://grafana.com/docs/grafana/latest/
 * Download it how you like and move it to your .ssh folder.
 
 ## SSH in to Connect
-* Navigate to your .ssh folder.
+* Navigate to your **.ssh** folder.
 * On AWS, click "Connect" on your EC2 instance. 
   * Copy this code into the .ssh folder to connect to the instance. 
-* type 'yes' for fingerprint credentials. 
-
+* Type 'yes' for fingerprint credentials. 
 
 <br> 
 
@@ -143,21 +158,43 @@ Source: https://grafana.com/docs/grafana/latest/
 * "Connect" to your EC2 instance on Git Bash terminal.
 
 ## Step 1: Install Docker
-1. Update Package List: `sudo apt-get update`
-2. Install Docker: `sudo apt-get install docker.io`
+1. Update Package List: `sudo apt-get update`.
+2. Install Docker: `sudo apt-get install docker.io`.
    * Give it permision ('y').
-3. Start Docker Service: `sudo systemctl start docker`
-4. Check docker status: `sudo systemctl status docker`
+3. Start Docker Service: `sudo systemctl start docker`.
+4. Check docker status: `sudo systemctl status docker`.
    * Type "q" to exit. 
-5. Enable Docker to Start at Boot: `sudo systemctl enable docker`
+5. Enable Docker to Start at Boot: `sudo systemctl enable docker`.
 
-![alt text](<Screenshot 2024-11-18 100353.png>)
+![alt text](<grafana-images/Screenshot 2024-11-18 100353.png>)
+
+<br>
+
+### Add Your User to the Docker Group - untested
+* Add your user to the Docker group to avoid using sudo for Docker commands. 
+  * This should stop you needing to using 'sudo' and/ giving Docker root privileges. 
+  * Granting Docker root privileges can pose several security risks.
+
+```bash
+sudo usermod -aG docker $USER
+```
+
+* Log Out and Log Back In. 
+  * This step is necessary for the group changes to take effect.
 
 ## Step 2: Pull the Grafana Docker Image
-Pull the Latest Grafana Image:  `sudo docker pull grafana/grafana-enterprise:9.0.5`
+Pull the Latest Grafana Image.
+
+```bash
+sudo docker pull grafana/grafana-enterprise
+```
 
 ## Step 3: Run the Grafana Container
-Run the Container:`sudo docker run -d -p 3000:3000 --name=grafana grafana/grafana-enterprise:9.0.5`
+Run the Container.
+
+```bash
+sudo docker run -d -p 3000:3000 --name=grafana grafana/grafana-enterprise
+```
 
 * `docker run` is a Docker CLI command that runs a new container from an image
 * `-d` (--detach) runs the container in the background
@@ -168,6 +205,7 @@ Run the Container:`sudo docker run -d -p 3000:3000 --name=grafana grafana/grafan
 
 ## Stop the Grafana container
 To stop the Grafana container, run the following command:
+
 ```bash
 # The `docker ps` command shows the processes running in Docker
 docker ps
@@ -190,7 +228,7 @@ docker stop grafana
    * Go to http://<public-ip>:3000
    * The default username and password are both **admin**.
 
-![alt text](image-1.png)
+![alt text](./grafana-images/image-1.png)
 
 ## Step 5: Configure Security Group (if using AWS)
 Open Security Group Settings:
@@ -202,6 +240,8 @@ Open Security Group Settings:
    * Type: Custom TCP
    * Port Range: 3000
    * Source: Anywhere (0.0.0.0/0)
+
+<br>
 
 # Go to Grafana Website
 ## Step 6: Change Default Password
@@ -224,7 +264,7 @@ Add a New Data Source:
 ## Step 8: Create Dashboards
 Create a New Dashboard:
 1. Click on the "+" icon on the left sidebar.
-2. Select "Dashboard" > "New Dashboard".
+2. Select `Dashboard` > `New Dashboard`.
 
 Add Panels:
 1. Click "Add new panel".
@@ -243,7 +283,7 @@ Add Panels:
 * Below this, click the download link for "Windows Installer".
 * Follow the natural requirements. 
 
-![alt text](image.png)
+![alt text](./grafana-images/image.png)
 
 <br> 
 
@@ -252,7 +292,7 @@ Add Panels:
   * This is located at the bottom left of Grafana. 
 * **Choose Data Source**: Select the appropriate data source (e.g., Prometheus, InfluxDB, AWS CloudWatch).
 
-![alt text](image-3.png)
+![alt text](./grafana-images/image-3.png)
 
 ## Enterprise Solutions and Integration
 * Solutions like Splunk require an enterprise license for integration with Grafana.
@@ -261,7 +301,7 @@ Add Panels:
 ## Prometheus Integration
 * Enter the Prometheus **endpoint** in the **data source configuration**.
 
-![alt text](image-4.png)
+![alt text](./grafana-images/image-4.png)
 
 * **Security Settings**: Configure security settings such as TLS and authentication if required.
 * **Latency Considerations**: Adjust settings for latency if there is a significant distance between Prometheus and Grafana setups.
@@ -336,7 +376,7 @@ Add Panels:
 
 <br>
 
-# Section 3: Grafana OSS Setup as a Service on AWS, User and Access Provisioning. 
+# Grafana OSS Setup as a Service on AWS, User and Access Provisioning
 
 ## Hardware Requirements for Grafana
 * The CPU should handle both **user management** and **data processing**. 
@@ -371,15 +411,17 @@ Add Panels:
 3. Launch the Instance:
    * Click "Launch instance" to start your EC2 instance.
 
-![alt text](image-2.png)
+![alt text](./grafana-images/image-2.png)
 
 <br> 
 
-# Install Grafana as a Standalone Binary
+# Install Grafana as a Standalone Binary (Amazon Image)
 Source: https://grafana.com/grafana/download
 
 * Version: 9.3.15
 * Edition: Enterprise.
+
+> EC2 instance has an image Amazon instead of Ubuntu so some commands may be different. 
 
 <br>
 
@@ -394,7 +436,7 @@ Source: https://grafana.com/grafana/download
 `wget https://dl.grafana.com/enterprise/release/grafana-enterprise-9.3.15.linux-amd64.tar.gz`
 ```
 
-![alt text](image-5.png)
+![alt text](./grafana-images/image-5.png)
 
 ## Extract and Start Grafana
 
@@ -403,7 +445,9 @@ Source: https://grafana.com/grafana/download
   * `tar -xvzf grafana-enterprise-9.3.15.linux-amd64.tar.gz`
 * List the contents to verify: `ls -al`
 
-![alt text](image-6.png)
+![alt text](./grafana-images/image-6.png)
+
+<br>
 
 ## Check for Grafana Server Utility
 
@@ -411,12 +455,14 @@ Source: https://grafana.com/grafana/download
   * Navigate to the Grafana directory: `cd grafana-9.3.15/`
   * List the contents: `ls`
 
-![alt text](image-7.png)
+![alt text](./grafana-images/image-7.png)
 
 * Navigate to the bin directory: `cd bin`
 * ist the contents to ensure the server utility is present: `ls`
 
-![alt text](image-8.png)
+![alt text](./grafana-images/image-8.png)
+
+<br>
 
 ## Create a Service for Grafana
 * Open the systemd directory: `cd /etc/systemd/system`
@@ -455,14 +501,16 @@ WantedBy=multi-user.target
 * Start the service: `systemctl start grafana-server.service`
 * Check status: `systemctl status grafana-server.service`
 
-![alt text](image-9.png)
+![alt text](./grafana-images/image-9.png)
 
-Enable Sigv4 authentication through built in AWS-SDK in Grafana
+Enable Sigv4 authentication through built in AWS-SDK in Grafana:
 * `systemctl daemon-reload`
 * `AWS_SDK_LOAD_CONFIG=true`
 * `GF_AUTH_SIGV4_AUTH_ENABLED=true`
 
 > Use this if you are coming into an error. 
+>
+> I did not have an error so it's untested. 
 
 ## Access Grafana
 You should now be able to access Grafana.
@@ -473,10 +521,10 @@ You should now be able to access Grafana.
   * Then choose a password if you'd like or click "skip".
 
 ## User Congifuration
-* In the bottom left corner of Grafana, click on "Configuration" > "Teams".
+* In the bottom left corner of Grafana, click on `Configuration` > `Teams`.
 * This is where you can add users/ group multiple users. 
 
-![alt text](image-10.png)
+![alt text](./grafana-images/image-10.png)
 
 * Where you are logged in as "admin", you will have elevated permissions.
 
@@ -545,7 +593,7 @@ You should now be able to access Grafana.
 
 <br> 
 
-# Section 4: Workspace Setup, CloudWatch Integration, Workspace Handling, and Access Controls
+# Workspace Setup, CloudWatch Integration, Workspace Handling, and Access Controls
 
 # Grafana Workspace Setup
 A workspace in Grafana refers to the setup and configuration environment where users, teams, and dashboards are managed.
@@ -599,7 +647,7 @@ CloudWatch is Amazon's monitoring service that tracks AWS resources. Grafana int
    * Click "Next: Tags" (optional) and then "Next: Review".
    * Click "Create user" and note the Access Key and Secret Key for this user.
 
-### Set Up the Data Source in Grafana:
+### Set Up the Data Source in Grafana
 * Log in to Grafana.
 * Go to `Configuration` → `Data Sources` → `Add Data Source`.
 * Select **CloudWatch** from the list.
@@ -619,7 +667,7 @@ CloudWatch is Amazon's monitoring service that tracks AWS resources. Grafana int
 # Workspace Handling
 Grafana workspaces are used to manage dashboards, alerts, and user access effectively.
 
-## Key Tasks for Managing Workspaces:
+## Key Tasks for Managing Workspaces
 ### Dashboard Creation
 * Go to `Dashboards` → `New Dashboard`.
 * Use the **Add a Panel** option to visualise metrics from your data source.
@@ -642,7 +690,7 @@ Grafana workspaces are used to manage dashboards, alerts, and user access effect
 # Access Controls
 Grafana provides robust access controls to ensure data security and proper collaboration.
 
-## Access Control Features:
+## Access Control Features
 ### Roles
 * Assigned per user or team:
   * **Admin**: Full access.
@@ -672,15 +720,15 @@ SMTP (Simple Mail Transfer Protocol) in Grafana is used for **sending email aler
 * Finding your SMTP server details depends on the email service provider you are using.
 
 ## Common Email Providers
-### Gmail:
+### Gmail
 * SMTP Server: smtp.gmail.com
 * Port: 587 (TLS) or 465 (SSL)
 
-### Outlook/Office 365:
+### Outlook/Office 365
 * SMTP Server: smtp.office365.com
 * Port: 587 (TLS)
 
-### Yahoo Mail:
+### Yahoo Mail
 * SMTP Server: smtp.mail.yahoo.com
 * Port: 587 (TLS) or 465 (SSL)
 
@@ -688,14 +736,14 @@ SMTP (Simple Mail Transfer Protocol) in Grafana is used for **sending email aler
 ### Open Outlook
 * Open the Outlook application on your computer.
 
-Go to Account Settings:
+`Go to Account Settings:`
 * Click on the File tab.
 * Select Account Settings and then Account Settings again from the dropdown.
 
-Select Your Email Account:
+`Select Your Email Account:`
 * Choose the email account you want to find the SMTP server for and click Change.
 
-Server Settings:
+`Server Settings:`
 * Look for the Outgoing mail server (SMTP) field. This will display your SMTP server address2.
 
 ### Finding SMTP Server in Other Email Clients
@@ -781,6 +829,7 @@ sudo systemctl restart grafana-server
   * Dynamic values that can be used in queries. 
     * Example: A variable for a server name can switch the view to monitor a different server without creating a new dashboard.
   * Create variables under `Settings` → `Variables`.
+
 * **Annotations**: Add notes on graphs to mark important events (e.g., system updates or incidents).
 * **Alerts**:
   * Configure alerts to notify when thresholds are crossed.
@@ -789,5 +838,160 @@ sudo systemctl restart grafana-server
 <br>
 
 # Node Exporter Setup for Infrastructure Monitoring through Prometheus and Grafana
+* Node Exporter is a tool that collects system-level metrics from your servers, such as CPU usage, memory usage, disk space, and network statistics. 
+* It then makes these metrics available in a format that Prometheus can scrape and store.
 
+![alt text](./grafana-images/image-14.png)
 
+<br>
+
+## Setup Prometheus Node Exporter EC2 Instance
+* I've kept the same EC2 instance but edited the imbound rules to match the course. 
+
+Steps:
+1. Navigate to chosen EC2 instance and "Click" on the box to select it. 
+2. Within it's menu down below, click "Security".
+
+![alt text](./grafana-images/image-16.png)
+
+3. Click on the **Security groups** link.
+
+![alt text](./grafana-images/image-17.png)
+
+4. Navigate to** Inbound rules** and click "Edit inbound rules".
+
+![alt text](./grafana-images/image-18.png)
+
+5. Make your desired changes.
+
+![alt text](./grafana-images/image-15.png)
+
+<br>
+
+## Setting Up Node Exporter for Infrastructure Monitoring
+
+### Install Node Exporter
+#### 1. Download Node Exporter
+* Go to the [Node Exporter download page](https://prometheus.io/download/#node_exporter).
+* Download the appropriate package for your operating system.
+* By default, Node Exporter runs on port **9100**.
+
+![alt text](./grafana-images/image-19.png)
+
+### Install Directly into EC2 Instance
+* You put it on the instances you want to monitor.
+* Currently, only "georgia-prometheus-test" is set up to accept **9100** port. If you want others to be succeptable, you will have to modify their inbound rules. 
+
+1. Insert the following command within your instance window: 
+
+```bash
+sudo apt-get install prometheus prometheus-node-exporter -y
+```
+
+2. Verify Installation:
+   * Grab the public ip of your chosen EC2 instance and paste the link which includes the port number.
+   * I.e., http://34.245.174.213:9100
+
+![alt text](./grafana-images/image-20.png)
+
+<br>
+
+### Run Node Explorer
+* Extract the downloaded file and navigate to the directory.
+* Start the Node Exporter: `./node_exporter`
+* By default, Node Exporter runs on port 9100.
+
+### Configure Prometheus to Scrape Node Exporter
+#### 1. Edit prometheus.yml
+* Navigate to your prometheus EC2 instance. 
+* `cd /etc/prometheus` 
+* `ls -a` to see your 'prometheus.yml' file. 
+* `sudo nano prometheus.yml`
+
+Add a new job for Node Exporter within **scrape_configs** section:
+* Replace <IP> with the Node Exporter server’s IP address. 
+  * e.g., 34.245.174.213. 
+* `Ctrl+s`, `Ctrl+x`: to save and exit. 
+
+```yml
+  - job_name: 'node_exporter'
+    static_configs:
+      - targets: ['<IP>:9100']
+```
+
+![alt text](./grafana-images/image-21.png)
+
+#### 2. Restart Prometheus
+* Apply the changes by restarting Prometheus: `sudo systemctl restart prometheus`
+
+#### 3. Verify in Prometheus:
+* Open Prometheus (http://<IP>:9090).
+* Go to `Status` → `Targets` and check if Node Exporter appears as an active target.
+  
+For example:
+* Link: http://34.245.174.213:9090
+* Go to `Status` → `Targets`
+
+![alt text](./grafana-images/image-22.png)
+
+* Check if Node Exporter appears as an active target.
+
+![alt text](./grafana-images/image-23.png)
+
+<br>
+
+## Visualise Metrics in Grafana
+1. Add Prometheus as a Data Source:
+   * For example: http://34.245.174.213:3000
+2. Go to `Configuration` → `Data Sources` → `Add Data Source`. 
+3. Select Prometheus and enter the URL (e.g., http://<Prometheus-IP>:9090)
+   * For example: http://34.245.174.213:9090
+
+![alt text](./grafana-images/image-24.png)
+
+4. Save and test the connection.
+
+![alt text](./grafana-images/image-25.png)
+
+<br>
+
+## Create a Dashboard for Infrastructure Monitoring
+* Go to `Dashboards` → `New Dashboard` → `Add a Panel`.
+* If you do not have a panel already created, select "Add Visualisation". 
+
+Choose metrics like:
+  * **CPU Usage**:
+    * Query example: rate(node_cpu_seconds_total{mode="user"}[1m])
+  * **Memory Usage**: 
+    * Query example: node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes * 100
+  * **Disk Usage**: 
+    * Query example: node_filesystem_free_bytes / node_filesystem_size_bytes * 100
+* Configure visualisations and thresholds.
+
+![alt text](./grafana-images/image-26.png)
+
+<br>
+
+### Example Created
+* Click the blue "Save Dashboard" in the top right corner when you are done. 
+
+![alt text](./grafana-images/image-27.png)
+
+<br>
+
+## Setting Up Alerts for Node Metrics
+### Documentation
+* https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/manage-library-panels/#create-a-library-panel
+
+Add Alerts to Panels:
+* Open a panel and go to the **Alert** tab.
+* Set conditions, e.g., "CPU Usage > 80%."
+
+![alt text](./grafana-images/image-28.png)
+
+* Configure notification channels like email or Slack.
+
+Enable Notification Channels:
+* Go to `Alerting` → `Notification Channels` and configure SMTP, Slack, or other integrations.
+
+<br> 

@@ -6,6 +6,7 @@
 - [Monitoring and Data Visualisation](#monitoring-and-data-visualisation)
   - [AWS Masterclass](#aws-masterclass)
   - [Grafana](#grafana)
+  - [Prometheus](#prometheus)
 
 <br>
 
@@ -45,8 +46,13 @@ Certificate for [project management](project-management/certificate.md).
 ## Grafana
 1. Introduction to [Grafana](grafana/intro-grafana.md).
 2. What [Grafana](grafana/grafana.md) can do. 
-3. Introduction to [Prometheus](grafana/intro-prometheus.md).
-4. Prometheus as a [Service](grafana/prometheus-service.md).
+3. Alerting in [Grafana](grafana/alerting-grafana.md). 
+4. Starting the [instance](grafana-prometheus/instances-on.md) back up. 
+
+## Prometheus
+1. Introduction to [Prometheus](grafana/intro-prometheus.md).
+2. Prometheus as a [Service](grafana/prometheus-service.md).
+3. Link [RDS](grafana/rds.md) to Prometheus and Grafana.
 
 <br>
 
