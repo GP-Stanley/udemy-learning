@@ -146,8 +146,7 @@ Certificate for [project management](project-management/certificate.md).
 1. [Basics](udemy-learning/terraform/basics-docs) of Terraform.
 2. Use Terraform [Outside of Core Workflow](udemy-learning/terraform/outside-core-workflow-docs).
 3. Interact with Terraform [Modules](udemy-learning/terraform/modules-docs).
-4. 
-Use the [Core]() Terraform Workflow.
+4. Use the [Core]() Terraform Workflow.
 <br>
 
 <hr style="height:4px;background:black">
