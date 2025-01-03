@@ -36,20 +36,48 @@ Documentation:
 <br>
 
 ## Understanding the Terraform Basics
-1. Terraform [Basics](udemy-learning/terraform/basics/Terraform+Basics.pdf).
-2. HashiCorp Configuration Language ([HCL](udemy-learning/terraform/basics/HashiCorp+Configuration+Language.pdf)).
-3. Terraform [Plub-in Based Architecture](udemy-learning/terraform/basics/Terraform+Plugin+Based+Architecture.pdf). 
-4. Terraform [Providor](udemy-learning/terraform/basics/Intro+to+the+Terraform+Provider+Block.pdf) Block.
-5. Terraform [Resource](udemy-learning/terraform/basics/Intro+to+the+Terraform+Resource+Block.pdf) Block. 
-6. Terraform [Input Variables](udemy-learning/terraform/basics/Intro+to+the+Input+Variables+Block.pdf) Block.
-7. Terraform [Local Variable](udemy-learning/terraform/basics/Intro+to+the+Local+Variables+Block.pdf) Block.
-8. Terraform [Data](udemy-learning/terraform/basics/Intro+to+the+Data+Block.pdf) Block.
-9. Terraform [Configuration](udemy-learning/terraform/basics/Intro+to+the+Terraform+Configuration+Block.pdf) Block. 
-10. Terraform [Module](udemy-learning/terraform/basics/Intro+to+the+Module+Block.pdf) Block.
-11. Terraform [Output](udemy-learning/terraform/basics/Intro+to+the+Terraform+Output+Block.pdf) Block.
-12. [Commenting](udemy-learning/terraform/basics/Commenting+Terraform+Code.pdf) Terraform Code.
-13. Terraform Provider [Installation and Versioning](udemy-learning/terraform/basics/Terraform+Providers+Installation.pdf). 
-14. Using [Multiple Terraform Providers](udemy-learning/terraform/basics/Multiple+Terraform+Providers.pdf). 
-15. Generating an [SSH Key](udemy-learning/terraform/basics/Terraform+TLS+Provider.pdf) using the Terraform TLS Provider.
-16. [Fetch, Version, and Upgrade](udemy-learning/terraform/basics/Fetch+Version+and+Upgrade+Terraform+Providers.pdf) Terraform Providers. 
-17. Terraform [Provisioners](udemy-learning/terraform/basics/Terraform+Provisioners.pdf).
+1. Terraform [Basics](udemy-learning/terraform/basics-docs/Terraform+Basics.pdf).
+2. HashiCorp Configuration Language ([HCL](udemy-learning/terraform/basics-docs/HashiCorp+Configuration+Language.pdf)).
+3. Terraform [Plub-in Based Architecture](udemy-learning/terraform/basics-docs/Terraform+Plugin+Based+Architecture.pdf). 
+4. Terraform [Providor](udemy-learning/terraform/basics-docs/Intro+to+the+Terraform+Provider+Block.pdf) Block.
+5. Terraform [Resource](udemy-learning/terraform/basics-docs/Intro+to+the+Terraform+Resource+Block.pdf) Block. 
+6. Terraform [Input Variables](udemy-learning/terraform/basics-docs/Intro+to+the+Input+Variables+Block.pdf) Block.
+7. Terraform [Local Variable](udemy-learning/terraform/basics-docs/Intro+to+the+Local+Variables+Block.pdf) Block.
+8. Terraform [Data](udemy-learning/terraform/basics-docs/Intro+to+the+Data+Block.pdf) Block.
+9. Terraform [Configuration](udemy-learning/terraform/basics-docs/Intro+to+the+Terraform+Configuration+Block.pdf) Block. 
+10. Terraform [Module](udemy-learning/terraform/basics-docs/Intro+to+the+Module+Block.pdf) Block.
+11. Terraform [Output](udemy-learning/terraform/basics-docs/Intro+to+the+Terraform+Output+Block.pdf) Block.
+12. [Commenting](udemy-learning/terraform/basics-docs/Commenting+Terraform+Code.pdf) Terraform Code.
+13. Terraform Provider [Installation and Versioning](udemy-learning/terraform/basics-docs/Terraform+Providers+Installation.pdf). 
+14. Using [Multiple Terraform Providers](udemy-learning/terraform/basics-docs/Multiple+Terraform+Providers.pdf). 
+15. Generating an [SSH Key](udemy-learning/terraform/basics-docs/Terraform+TLS+Provider.pdf) using the Terraform TLS Provider.
+16. [Fetch, Version, and Upgrade](udemy-learning/terraform/basics-docs/Fetch+Version+and+Upgrade+Terraform+Providers.pdf) Terraform Providers. 
+17. Terraform [Provisioners](udemy-learning/terraform/basics-docs/Terraform+Provisioners.pdf).
+
+<br>
+
+<hr style="height:4px;background:black">
+
+<br>
+
+## Use Terraform Outside of Core Workflow
+1. [Auto Formatting](udemy-learning/terraform/outside-core-workflow-docs/Auto+Formatting+Terraform+Code.pdf) Terraform Code.
+2. Replace Resources using [Terraform Taint](udemy-learning/terraform/outside-core-workflow-docs/Terraform+Taint+and+Replace.pdf).
+3. Terraform [Import](udemy-learning/terraform/outside-core-workflow-docs/Terraform+Import.pdf).
+4. Terraform Workspaces - [OSS](udemy-learning/terraform/outside-core-workflow-docs/Terraform+Workspaces+-+OSS.pdf).
+5. Terraform [State CLI](udemy-learning/terraform/outside-core-workflow-docs/Terraform+State.pdf).
+6. [Debugging](udemy-learning/terraform/outside-core-workflow-docs/Debugging+Terraform.pdf) Terraform. 
+
+<br>
+
+<hr style="height:4px;background:black">
+
+<br>
+
+## Interact with Terraform Modules
+1. Terraform [Modules](udemy-learning/terraform/modules-docs/Terraform+Modules.pdf).
+   * [Sources](udemy-learning/terraform/modules-docs/Terraform+Modules+Sources.pdf).
+   * [Inputs and Outputs](udemy-learning/terraform/modules-docs/Terraform+Module+Inputs+and+Outputs.pdf). 
+   * [Scope](udemy-learning/terraform/modules-docs/Terraform+Module+Scope.pdf).
+   * [Public Registry](udemy-learning/terraform/modules-docs/Terraform+Module+Registry.pdf).
+   * [Versioning](udemy-learning/terraform/modules-docs/Terraform+Module+Versions.pdf).
