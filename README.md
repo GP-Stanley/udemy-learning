@@ -10,7 +10,7 @@
 - [AWS Certified Cloud Practitioner](#aws-certified-cloud-practitioner)
 - [Terraform](#terraform)
   - [HashiCorp Certified: Terraform Associate 2024](#hashicorp-certified-terraform-associate-2024)
-  - [HashiCorp Certified: Terraform Associate - Hands-On Labs](#hashicorp-certified-terraform-associate---hands-on-labs)
+  - [## Understanding the Terraform Basics](#-understanding-the-terraform-basics)
 
 
 <br>
@@ -142,5 +142,21 @@ Certificate for [project management](project-management/certificate.md).
 
 <br>
 
-## HashiCorp Certified: Terraform Associate - Hands-On Labs
-1. 
+## ## Understanding the Terraform Basics
+1. Terraform [Basics](terraform/basics/Terraform+Basics.pdf).
+2. HashiCorp Configuration Language ([HCL](terraform/basics/HashiCorp+Configuration+Language.pdf)).
+3. Terraform [Plub-in Based Architecture](terraform/basics/Terraform+Plugin+Based+Architecture.pdf). 
+4. Terraform [Providor](terraform/basics/Intro+to+the+Terraform+Provider+Block.pdf) Block.
+5. Terraform [Resource](terraform/basics/Intro+to+the+Terraform+Resource+Block.pdf) Block. 
+6. Terraform [Input Variables](terraform/basics/Intro+to+the+Input+Variables+Block.pdf) Block.
+7. Terraform [Local Variable](terraform/basics/Intro+to+the+Local+Variables+Block.pdf) Block.
+8. Terraform [Data](terraform/basics/Intro+to+the+Data+Block.pdf) Block.
+9. Terraform [Configuration](terraform/basics/Intro+to+the+Terraform+Configuration+Block.pdf) Block. 
+10. Terraform [Module](terraform/basics/Intro+to+the+Module+Block.pdf) Block.
+11. Terraform [Output](terraform/basics/Intro+to+the+Terraform+Output+Block.pdf) Block.
+12. [Commenting](terraform/basics/Commenting+Terraform+Code.pdf) Terraform Code.
+13. Terraform Provider [Installation and Versioning](terraform/basics/Terraform+Providers+Installation.pdf). 
+14. Using [Multiple Terraform Providers](terraform/basics/Multiple+Terraform+Providers.pdf). 
+15. Generating an [SSH Key](terraform/basics/Terraform+TLS+Provider.pdf) using the Terraform TLS Provider.
+16. [Fetch, Version, and Upgrade](terraform/basics/Fetch+Version+and+Upgrade+Terraform+Providers.pdf) Terraform Providers. 
+17. Terraform [Provisioners](terraform/basics/Terraform+Provisioners.pdf)

@@ -35,7 +35,7 @@ Documentation:
 
 <br>
 
-## Understanding the Terraform Basic
+## Understanding the Terraform Basics
 1. Terraform [Basics](udemy-learning/terraform/basics/Terraform+Basics.pdf).
 2. HashiCorp Configuration Language ([HCL](udemy-learning/terraform/basics/HashiCorp+Configuration+Language.pdf)).
 3. Terraform [Plub-in Based Architecture](udemy-learning/terraform/basics/Terraform+Plugin+Based+Architecture.pdf). 
