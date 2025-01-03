@@ -1,15 +1,15 @@
 # Terraform 
 
 ## HashiCorp Certified: Terraform Associate 2024
-1. Introduction: [text](terraform/hashicorp/introduction-to-terraform.md).
-2. Deploying Infrastructure with Terraform: [text](hashicorp/deploy-infrastructure.md)
-3. Read, Generate, Modify Configurations: [text](hashicorp/read-generate-modify.md)
-4. [Terraform Provisioners](udemy-learning/terraform/hashicorp/terraform-provisioners.md).
-5. Terraform [Modules & Workspaces](udemy-learning/terraform/hashicorp/modules-workspaces.md). 
-6. [Remote State Management](udemy-learning/terraform/hashicorp/remote-state-management.md).
-7. [Security Primer](udemy-learning/terraform/hashicorp/security-primer.md).
-8. Terraform [Cloud & Enterprise](udemy-learning/terraform/hashicorp/cloud-enterprise.md) Capabilities. 
-9. [Terraform Challenges](udemy-learning/terraform/hashicorp/terraform-challenges.md). 
+1. Introduction: [text](hashicorp/introduction-to-terraform.md).
+2. Deploying Infrastructure with Terraform: [text](deploy-infrastructure.md)
+3. Read, Generate, Modify Configurations: [text](read-generate-modify.md)
+4. [Terraform Provisioners](hashicorp/terraform-provisioners.md).
+5. Terraform [Modules & Workspaces](hashicorp/modules-workspaces.md). 
+6. [Remote State Management](hashicorp/remote-state-management.md).
+7. [Security Primer](hashicorp/security-primer.md).
+8. Terraform [Cloud & Enterprise](hashicorp/cloud-enterprise.md) Capabilities. 
+9. [Terraform Challenges](hashicorp/terraform-challenges.md). 
 
 <br>
 
