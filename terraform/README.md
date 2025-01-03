@@ -75,9 +75,9 @@ Documentation:
 <br>
 
 ## Interact with Terraform Modules
-1. Terraform [Modules](udemy-learning/terraform/modules-docs/Terraform+Modules.pdf).
-   * [Sources](udemy-learning/terraform/modules-docs/Terraform+Modules+Sources.pdf).
-   * [Inputs and Outputs](udemy-learning/terraform/modules-docs/Terraform+Module+Inputs+and+Outputs.pdf). 
-   * [Scope](udemy-learning/terraform/modules-docs/Terraform+Module+Scope.pdf).
-   * [Public Registry](udemy-learning/terraform/modules-docs/Terraform+Module+Registry.pdf).
-   * [Versioning](udemy-learning/terraform/modules-docs/Terraform+Module+Versions.pdf).
+1. Terraform [Modules](modules-docs/Terraform+Modules.pdf).
+   * [Sources](modules-docs/Terraform+Modules+Sources.pdf).
+   * [Inputs and Outputs](modules-docs/Terraform+Module+Inputs+and+Outputs.pdf). 
+   * [Scope](modules-docs/Terraform+Module+Scope.pdf).
+   * [Public Registry](modules-docs/Terraform+Module+Registry.pdf).
+   * [Versioning](modules-docs/Terraform+Module+Versions.pdf).
