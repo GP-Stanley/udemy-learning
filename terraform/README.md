@@ -81,3 +81,17 @@ Documentation:
    * [Scope](modules-docs/Terraform+Module+Scope.pdf).
    * [Public Registry](modules-docs/Terraform+Module+Registry.pdf).
    * [Versioning](modules-docs/Terraform+Module+Versions.pdf).
+
+<br>
+
+<hr style="height:4px;background:black">
+
+<br>
+
+## Use the Core Terraform Workflow.
+1. Understanding the Terraform [Workflow](udemy-learning/terraform/core-docs/Terraform+Workflow.pdf).
+2. Initialising Terraform with the '[terraform init](udemy-learning/terraform/core-docs/Terraform+Init.pdf)' command.
+3. Validating Terraform Configuration with '[terraform validate](udemy-learning/terraform/core-docs/Validating+Terraform+Configuration.pdf)'.
+4. Generate and Review an Execution Plan with '[terraform plan](udemy-learning/terraform/core-docs/Terraform+Plan.pdf)'.
+5. Execute Changes to Infrastructure with '[terraform apply](udemy-learning/terraform/core-docs/Terraform+Apply.pdf)'.
+6. Delete Resources Using the '[terraform destroy](udemy-learning/terraform/core-docs/Terraform+Destroy.pdf)' command. 
