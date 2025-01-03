@@ -36,23 +36,23 @@ Documentation:
 <br>
 
 ## Understanding the Terraform Basics
-1. Terraform [Basics](udemy-learning/terraform/basics-docs/Terraform+Basics.pdf).
-2. HashiCorp Configuration Language ([HCL](udemy-learning/terraform/basics-docs/HashiCorp+Configuration+Language.pdf)).
-3. Terraform [Plub-in Based Architecture](udemy-learning/terraform/basics-docs/Terraform+Plugin+Based+Architecture.pdf). 
-4. Terraform [Providor](udemy-learning/terraform/basics-docs/Intro+to+the+Terraform+Provider+Block.pdf) Block.
-5. Terraform [Resource](udemy-learning/terraform/basics-docs/Intro+to+the+Terraform+Resource+Block.pdf) Block. 
-6. Terraform [Input Variables](udemy-learning/terraform/basics-docs/Intro+to+the+Input+Variables+Block.pdf) Block.
-7. Terraform [Local Variable](udemy-learning/terraform/basics-docs/Intro+to+the+Local+Variables+Block.pdf) Block.
-8. Terraform [Data](udemy-learning/terraform/basics-docs/Intro+to+the+Data+Block.pdf) Block.
-9. Terraform [Configuration](udemy-learning/terraform/basics-docs/Intro+to+the+Terraform+Configuration+Block.pdf) Block. 
-10. Terraform [Module](udemy-learning/terraform/basics-docs/Intro+to+the+Module+Block.pdf) Block.
-11. Terraform [Output](udemy-learning/terraform/basics-docs/Intro+to+the+Terraform+Output+Block.pdf) Block.
-12. [Commenting](udemy-learning/terraform/basics-docs/Commenting+Terraform+Code.pdf) Terraform Code.
-13. Terraform Provider [Installation and Versioning](udemy-learning/terraform/basics-docs/Terraform+Providers+Installation.pdf). 
-14. Using [Multiple Terraform Providers](udemy-learning/terraform/basics-docs/Multiple+Terraform+Providers.pdf). 
-15. Generating an [SSH Key](udemy-learning/terraform/basics-docs/Terraform+TLS+Provider.pdf) using the Terraform TLS Provider.
-16. [Fetch, Version, and Upgrade](udemy-learning/terraform/basics-docs/Fetch+Version+and+Upgrade+Terraform+Providers.pdf) Terraform Providers. 
-17. Terraform [Provisioners](udemy-learning/terraform/basics-docs/Terraform+Provisioners.pdf).
+1. Terraform [Basics](basics-docs/Terraform+Basics.pdf). ([text](basics-docs/Terraform+Basics.pdf))
+2. HashiCorp Configuration Language ([HCL](basics-docs/HashiCorp+Configuration+Language.pdf)).
+3. Terraform [Plub-in Based Architecture](basics-docs/Terraform+Plugin+Based+Architecture.pdf). 
+4. Terraform [Providor](basics-docs/Intro+to+the+Terraform+Provider+Block.pdf) Block.
+5. Terraform [Resource](basics-docs/Intro+to+the+Terraform+Resource+Block.pdf) Block. 
+6. Terraform [Input Variables](basics-docs/Intro+to+the+Input+Variables+Block.pdf) Block.
+7. Terraform [Local Variable](basics-docs/Intro+to+the+Local+Variables+Block.pdf) Block.
+8. Terraform [Data](basics-docs/Intro+to+the+Data+Block.pdf) Block.
+9. Terraform [Configuration](basics-docs/Intro+to+the+Terraform+Configuration+Block.pdf) Block. 
+10. Terraform [Module](basics-docs/Intro+to+the+Module+Block.pdf) Block.
+11. Terraform [Output](basics-docs/Intro+to+the+Terraform+Output+Block.pdf) Block.
+12. [Commenting](basics-docs/Commenting+Terraform+Code.pdf) Terraform Code.
+13. Terraform Provider [Installation and Versioning](basics-docs/Terraform+Providers+Installation.pdf). 
+14. Using [Multiple Terraform Providers](basics-docs/Multiple+Terraform+Providers.pdf). 
+15. Generating an [SSH Key](basics-docs/Terraform+TLS+Provider.pdf) using the Terraform TLS Provider.
+16. [Fetch, Version, and Upgrade](basics-docs/Fetch+Version+and+Upgrade+Terraform+Providers.pdf) Terraform Providers. 
+17. Terraform [Provisioners](basics-docs/Terraform+Provisioners.pdf).
 
 <br>
 
