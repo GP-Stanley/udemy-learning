@@ -14,9 +14,9 @@
 <br>
 
 ### HashiCorp Exam Preparation Practice Test
-* Exam [1](udemy-learning/terraform/exam_practise/exam1.md).
-* Exam [2](udemy-learning/terraform/exam_practise/exam2.md).
-* Exam [3](udemy-learning/terraform/exam_practise/exam3.md).
+* Exam [1](exam_practise/exam1.md).
+* Exam [2](exam_practise/exam2.md).
+* Exam [3](exam_practise/exam3.md).
 
 <br>
 
@@ -61,12 +61,12 @@ Documentation:
 <br>
 
 ## Use Terraform Outside of Core Workflow
-1. [Auto Formatting](udemy-learning/terraform/outside-core-workflow-docs/Auto+Formatting+Terraform+Code.pdf) Terraform Code.
-2. Replace Resources using [Terraform Taint](udemy-learning/terraform/outside-core-workflow-docs/Terraform+Taint+and+Replace.pdf).
-3. Terraform [Import](udemy-learning/terraform/outside-core-workflow-docs/Terraform+Import.pdf).
-4. Terraform Workspaces - [OSS](udemy-learning/terraform/outside-core-workflow-docs/Terraform+Workspaces+-+OSS.pdf).
-5. Terraform [State CLI](udemy-learning/terraform/outside-core-workflow-docs/Terraform+State.pdf).
-6. [Debugging](udemy-learning/terraform/outside-core-workflow-docs/Debugging+Terraform.pdf) Terraform. 
+1. [Auto Formatting](outside-core-workflow-docs/Auto+Formatting+Terraform+Code.pdf) Terraform Code.
+2. Replace Resources using [Terraform Taint](outside-core-workflow-docs/Terraform+Taint+and+Replace.pdf).
+3. Terraform [Import](outside-core-workflow-docs/Terraform+Import.pdf).
+4. Terraform Workspaces - [OSS](outside-core-workflow-docs/Terraform+Workspaces+-+OSS.pdf).
+5. Terraform [State CLI](outside-core-workflow-docs/Terraform+State.pdf).
+6. [Debugging](outside-core-workflow-docs/Debugging+Terraform.pdf) Terraform. 
 
 <br>
 
