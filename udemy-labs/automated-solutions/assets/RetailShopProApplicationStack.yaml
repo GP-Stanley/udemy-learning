@@ -1,0 +1,38 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Application Stack for EC2 Instances
+
+Parameters:
+  EC2RoleforAWSSystemsManager:
+    Type: 'String'
+    Default: 'EC2RoleforAWSSystemsManager'
+  LatestAmiId:
+    Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+    Default: '/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2'
+
+Resources:
+  EC2InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      InstanceProfileName: EC2InstanceProfileForRetailShopPro
+      Path: /
+      Roles:
+       - !Ref EC2RoleforAWSSystemsManager
+  EC2InstanceProd:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.small
+      ImageId: !Ref LatestAmiId
+      IamInstanceProfile: !Ref EC2InstanceProfile
+      Tags:
+        - Key: Patch Group
+          Value: prod-server
+  EC2InstanceDev:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: !Ref LatestAmiId
+      IamInstanceProfile: !Ref EC2InstanceProfile
+      Tags:
+        - Key: Patch Group
+          Value: dev-server
+
