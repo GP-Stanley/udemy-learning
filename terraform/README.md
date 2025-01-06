@@ -120,15 +120,15 @@ Documentation:
 <br>
 
 ## Implement and Maintain State
-1. Terraform State - [Default Local Backend](implement-and-maintain-state/Terraform+State+Default+Local+Backend.pdf).
-2. Terraform State [Locking](implement-and-maintain-state/Terraform+State+Locking.pdf). 
-3. Terraform State - [Backend Authentication](implement-and-maintain-state/Terraform+State+Backend+Authentication.pdf).
-4. Terraform State - [Backend Storage](implement-and-maintain-state/Terraform+State+Backend+Storage.pdf).
-5. Terraform Remote State - [Enhanced Backend](implement-and-maintain-state/Terraform+Remote+State+Enhanced+Backend.pdf).
-6. Terraform State [Migration](implement-and-maintain-state/Terraform+State+Migration.pdf).
-7. Terraform State [Refresh](implement-and-maintain-state/Terraform+State+Refresh.pdf).
-8. Terraform Backend [Configuration](implement-and-maintain-state/Terraform+Backend+Configuration.pdf).
-9. [Sensitive Data](implement-and-maintain-state/Sensitive+Data+in+Terraform+State.pdf) in Terraform State. 
+1. Terraform State - [Default Local Backend](documentation/implement-and-maintain-state/Terraform+State+Default+Local+Backend.pdf).
+2. Terraform State [Locking](documentation/implement-and-maintain-state/Terraform+State+Locking.pdf). 
+3. Terraform State - [Backend Authentication](documentation/implement-and-maintain-state/Terraform+State+Backend+Authentication.pdf).
+4. Terraform State - [Backend Storage](documentation/implement-and-maintain-state/Terraform+State+Backend+Storage.pdf).
+5. Terraform Remote State - [Enhanced Backend](documentation/implement-and-maintain-state/Terraform+Remote+State+Enhanced+Backend.pdf).
+6. Terraform State [Migration](documentation/implement-and-maintain-state/Terraform+State+Migration.pdf).
+7. Terraform State [Refresh](documentation/implement-and-maintain-state/Terraform+State+Refresh.pdf).
+8. Terraform Backend [Configuration](documentation/implement-and-maintain-state/Terraform+Backend+Configuration.pdf).
+9. [Sensitive Data](documentation/implement-and-maintain-state/Sensitive+Data+in+Terraform+State.pdf) in Terraform State. 
 
 <br>
 
