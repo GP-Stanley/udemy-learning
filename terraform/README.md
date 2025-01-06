@@ -53,23 +53,23 @@ Documentation:
 <br>
 
 ## Understanding the Terraform Basics
-1. Terraform [Basics](basics-docs/Terraform+Basics.pdf). ([text](basics-docs/Terraform+Basics.pdf))
-2. HashiCorp Configuration Language ([HCL](basics-docs/HashiCorp+Configuration+Language.pdf)).
-3. Terraform [Plub-in Based Architecture](basics-docs/Terraform+Plugin+Based+Architecture.pdf). 
-4. Terraform [Providor](basics-docs/Intro+to+the+Terraform+Provider+Block.pdf) Block.
-5. Terraform [Resource](basics-docs/Intro+to+the+Terraform+Resource+Block.pdf) Block. 
-6. Terraform [Input Variables](basics-docs/Intro+to+the+Input+Variables+Block.pdf) Block.
-7. Terraform [Local Variable](basics-docs/Intro+to+the+Local+Variables+Block.pdf) Block.
-8. Terraform [Data](basics-docs/Intro+to+the+Data+Block.pdf) Block.
-9. Terraform [Configuration](basics-docs/Intro+to+the+Terraform+Configuration+Block.pdf) Block. 
-10. Terraform [Module](basics-docs/Intro+to+the+Module+Block.pdf) Block.
-11. Terraform [Output](basics-docs/Intro+to+the+Terraform+Output+Block.pdf) Block.
-12. [Commenting](basics-docs/Commenting+Terraform+Code.pdf) Terraform Code.
-13. Terraform Provider [Installation and Versioning](basics-docs/Terraform+Providers+Installation.pdf). 
-14. Using [Multiple Terraform Providers](basics-docs/Multiple+Terraform+Providers.pdf). 
-15. Generating an [SSH Key](basics-docs/Terraform+TLS+Provider.pdf) using the Terraform TLS Provider.
-16. [Fetch, Version, and Upgrade](basics-docs/Fetch+Version+and+Upgrade+Terraform+Providers.pdf) Terraform Providers. 
-17. Terraform [Provisioners](basics-docs/Terraform+Provisioners.pdf).
+1. Terraform [Basics](documentation/basics-docs/Terraform+Basics.pdf). 
+2. HashiCorp Configuration Language ([HCL](documentation/basics-docs/HashiCorp+Configuration+Language.pdf)).
+3. Terraform [Plub-in Based Architecture](documentation/basics-docs/Terraform+Plugin+Based+Architecture.pdf). 
+4. Terraform [Providor](documentation/basics-docs/Intro+to+the+Terraform+Provider+Block.pdf) Block.
+5. Terraform [Resource](documentation/basics-docs/Intro+to+the+Terraform+Resource+Block.pdf) Block. 
+6. Terraform [Input Variables](documentation/basics-docs/Intro+to+the+Input+Variables+Block.pdf) Block.
+7. Terraform [Local Variable](documentation/basics-docs/Intro+to+the+Local+Variables+Block.pdf) Block.
+8. Terraform [Data](documentation/basics-docs/Intro+to+the+Data+Block.pdf) Block.
+9. Terraform [Configuration](documentation/basics-docs/Intro+to+the+Terraform+Configuration+Block.pdf) Block. 
+10. Terraform [Module](documentation/basics-docs/Intro+to+the+Module+Block.pdf) Block.
+11. Terraform [Output](documentation/basics-docs/Intro+to+the+Terraform+Output+Block.pdf) Block.
+12. [Commenting](documentation/basics-docs/Commenting+Terraform+Code.pdf) Terraform Code.
+13. Terraform Provider [Installation and Versioning](documentation/basics-docs/Terraform+Providers+Installation.pdf). 
+14. Using [Multiple Terraform Providers](documentation/basics-docs/Multiple+Terraform+Providers.pdf). 
+15. Generating an [SSH Key](documentation/basics-docs/Terraform+TLS+Provider.pdf) using the Terraform TLS Provider.
+16. [Fetch, Version, and Upgrade](documentation/basics-docs/Fetch+Version+and+Upgrade+Terraform+Providers.pdf) Terraform Providers. 
+17. Terraform [Provisioners](documentation/basics-docs/Terraform+Provisioners.pdf).
 
 <br>
 
@@ -78,12 +78,12 @@ Documentation:
 <br>
 
 ## Use Terraform Outside of Core Workflow
-1. [Auto Formatting](outside-core-workflow-docs/Auto+Formatting+Terraform+Code.pdf) Terraform Code.
-2. Replace Resources using [Terraform Taint](outside-core-workflow-docs/Terraform+Taint+and+Replace.pdf).
-3. Terraform [Import](outside-core-workflow-docs/Terraform+Import.pdf).
-4. Terraform Workspaces - [OSS](outside-core-workflow-docs/Terraform+Workspaces+-+OSS.pdf).
-5. Terraform [State CLI](outside-core-workflow-docs/Terraform+State.pdf).
-6. [Debugging](outside-core-workflow-docs/Debugging+Terraform.pdf) Terraform. 
+1. [Auto Formatting](documentation/outside-core-workflow-docs/Auto+Formatting+Terraform+Code.pdf) Terraform Code.
+2. Replace Resources using [Terraform Taint](documentation/outside-core-workflow-docs/Terraform+Taint+and+Replace.pdf).
+3. Terraform [Import](documentation/outside-core-workflow-docs/Terraform+Import.pdf).
+4. Terraform Workspaces - [OSS](documentation/outside-core-workflow-docs/Terraform+Workspaces+-+OSS.pdf).
+5. Terraform [State CLI](documentation/outside-core-workflow-docs/Terraform+State.pdf).
+6. [Debugging](documentation/outside-core-workflow-docs/Debugging+Terraform.pdf) Terraform. 
 
 <br>
 
@@ -92,12 +92,12 @@ Documentation:
 <br>
 
 ## Interact with Terraform Modules
-1. Terraform [Modules](modules-docs/Terraform+Modules.pdf).
-   * [Sources](modules-docs/Terraform+Modules+Sources.pdf).
-   * [Inputs and Outputs](modules-docs/Terraform+Module+Inputs+and+Outputs.pdf). 
-   * [Scope](modules-docs/Terraform+Module+Scope.pdf).
-   * [Public Registry](modules-docs/Terraform+Module+Registry.pdf).
-   * [Versioning](modules-docs/Terraform+Module+Versions.pdf).
+1. Terraform [Modules](documentation/modules-docs/Terraform+Modules.pdf).
+   * [Sources](documentation/modules-docs/Terraform+Modules+Sources.pdf).
+   * [Inputs and Outputs](documentation/modules-docs/Terraform+Module+Inputs+and+Outputs.pdf). 
+   * [Scope](documentation/modules-docs/Terraform+Module+Scope.pdf).
+   * [Public Registry](documentation/modules-docs/Terraform+Module+Registry.pdf).
+   * [Versioning](documentation/modules-docs/Terraform+Module+Versions.pdf).
 
 <br>
 
@@ -106,12 +106,12 @@ Documentation:
 <br>
 
 ## Use the Core Terraform Workflow.
-1. Understanding the Terraform [Workflow](core-docs/Terraform+Workflow.pdf).
-2. Initialising Terraform with the '[terraform init](core-docs/Terraform+Init.pdf)' command.
-3. Validating Terraform Configuration with '[terraform validate](core-docs/Validating+Terraform+Configuration.pdf)'.
-4. Generate and Review an Execution Plan with '[terraform plan](core-docs/Terraform+Plan.pdf)'.
-5. Execute Changes to Infrastructure with '[terraform apply](core-docs/Terraform+Apply.pdf)'.
-6. Delete Resources Using the '[terraform destroy](core-docs/Terraform+Destroy.pdf)' command. 
+1. Understanding the Terraform [Workflow](documentation/core-docs/Terraform+Workflow.pdf).
+2. Initialising Terraform with the '[terraform init](documentation/core-docs/Terraform+Init.pdf)' command.
+3. Validating Terraform Configuration with '[terraform validate](documentation/core-docs/Validating+Terraform+Configuration.pdf)'.
+4. Generate and Review an Execution Plan with '[terraform plan](documentation/core-docs/Terraform+Plan.pdf)'.
+5. Execute Changes to Infrastructure with '[terraform apply](documentation/core-docs/Terraform+Apply.pdf)'.
+6. Delete Resources Using the '[terraform destroy](documentation/core-docs/Terraform+Destroy.pdf)' command. 
 
 <br>
 
