@@ -9,6 +9,9 @@
   - [Implement and Maintain State](#implement-and-maintain-state)
   - [Read, Generate, and Modify Configuration](#read-generate-and-modify-configuration)
   - [Understand HCP Terraform (Terraform Cloud) Capabilities](#understand-hcp-terraform-terraform-cloud-capabilities)
+  - [Additional Terraform Labs](#additional-terraform-labs)
+  - [Exam Tips](#exam-tips)
+  - [](#)
 
 <br>
 
@@ -157,4 +160,42 @@ Documentation:
 <br>
 
 ## Understand HCP Terraform (Terraform Cloud) Capabilities
-1. 
+1. HCP Terraform - [Getting Started](documentation/hcp-capabilities/Terraform+Cloud+Getting+Started.pdf).
+2. HCP Terraform - [Remote State](documentation/hcp-capabilities/Terraform+Remote+State+Enhanced+Backend.pdf).
+3. HCP Terraform - [Workspaces](documentation/hcp-capabilities/Terraform+Cloud+Workspaces.pdf).
+4. HCP Terraform - [Secure Variables](documentation/hcp-capabilities/Terraform+Cloud+Secure+Variables.pdf).
+5. HCP Terraform - [Version Control Integration](documentation/hcp-capabilities/Terraform+Cloud+Version+Control.pdf).
+6. HCP Terraform - [Private Registry](documentation/hcp-capabilities/Terraform+Cloud+Private+Module+Registry.pdf).
+7. HCP Terraform - [Sentinel Policy](documentation/hcp-capabilities/Terraform+Cloud+Sentinel+Policy.pdf).
+8. HCP Terraform - [VCS Workflow](documentation/hcp-capabilities/Terraform+Cloud+Version+Control+Workflow.pdf).
+
+<br>
+
+<hr style="height:4px;background:black">
+
+<br>
+
+## Additional Terraform Labs
+1. Extending Terraform - [Non-Cloud Providers](documentation/tf-labs/Extra-Extending+Terraform+Non+Cloud+Providers.pdf).
+2. Terraform [Auto Complete](documentation/tf-labs/Extra-Terraform+AutoComplete.pdf).
+3. AWS [Multi-Region Provider Aliasing](documentation/tf-labs/Extra-Terraform+AWS+Provider+-+Multi-Region+and+Alias.pdf).
+
+<br>
+
+<hr style="height:4px;background:black">
+
+<br>
+
+## Exam Tips
+1. HashiCorp [Infrastructure Automation Certifications](https://developer.hashicorp.com/certifications/infrastructure-automation).
+2. Other Course [Resources](https://github.com/btkrausen/hashicorp).
+3. [Study Guide](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-study-003).
+4. [Review Guide](https://developer.hashicorp.com/terraform/tutorials/certification-003/associate-review-003).
+
+<br>
+
+<hr style="height:4px;background:black">
+
+<br>
+
+## 
