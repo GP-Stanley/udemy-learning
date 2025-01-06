@@ -143,10 +143,15 @@ Certificate for [project management](project-management/certificate.md).
 <br>
 
 ## Documentation
-1. [Basics](terraform/basics-docs) of Terraform.
-2. Use Terraform [Outside of Core Workflow]terraform/outside-core-workflow-docs).
-3. Interact with Terraform [Modules](terraform/modules-docs).
-4. Use the [Core](terraform/core-docs) Terraform Workflow.
+1. [Basics](terraform/documentation/basics-docs) of Terraform.
+2. Use Terraform [Outside of Core Workflow](terraform/documentation/outside-core-workflow-docs).
+3. Interact with Terraform [Modules](terraform/documentation/modules-docs).
+4. Use the [Core](terraform/documentation/core-docs) Terraform Workflow.
+5. [Implement and Maintain State](terraform/documentation/implement-and-maintain-state).
+6. [Read, Generate, and Modify Configuration](terraform/documentation/configuration).
+7. Understand [HCP Terraform (Terraform Cloud) Capabilities](terraform/documentation/hcp-capabilities).
+8. Additional [Terraform Labs](terraform/documentation/tf-labs).
+
 <br>
 
 <hr style="height:4px;background:black">
