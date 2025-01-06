@@ -1,3 +1,20 @@
+- [Terraform](#terraform)
+  - [HashiCorp Certified: Terraform Associate 2024](#hashicorp-certified-terraform-associate-2024)
+    - [HashiCorp Exam Preparation Practice Test](#hashicorp-exam-preparation-practice-test)
+  - [HashiCorp Certified: Terraform Associate - Hands-On Labs](#hashicorp-certified-terraform-associate---hands-on-labs)
+  - [Understanding the Terraform Basics](#understanding-the-terraform-basics)
+  - [Use Terraform Outside of Core Workflow](#use-terraform-outside-of-core-workflow)
+  - [Interact with Terraform Modules](#interact-with-terraform-modules)
+  - [Use the Core Terraform Workflow.](#use-the-core-terraform-workflow)
+  - [Implement and Maintain State](#implement-and-maintain-state)
+  - [](#)
+
+<br>
+
+<hr style="height:4px;background:black">
+
+<br>
+
 # Terraform 
 
 ## HashiCorp Certified: Terraform Associate 2024
@@ -95,3 +112,28 @@ Documentation:
 4. Generate and Review an Execution Plan with '[terraform plan](core-docs/Terraform+Plan.pdf)'.
 5. Execute Changes to Infrastructure with '[terraform apply](core-docs/Terraform+Apply.pdf)'.
 6. Delete Resources Using the '[terraform destroy](core-docs/Terraform+Destroy.pdf)' command. 
+
+<br>
+
+<hr style="height:4px;background:black">
+
+<br>
+
+## Implement and Maintain State
+1. Terraform State - [Default Local Backend](implement-and-maintain-state/Terraform+State+Default+Local+Backend.pdf).
+2. Terraform State [Locking](implement-and-maintain-state/Terraform+State+Locking.pdf). 
+3. Terraform State - [Backend Authentication](implement-and-maintain-state/Terraform+State+Backend+Authentication.pdf).
+4. Terraform State - [Backend Storage](implement-and-maintain-state/Terraform+State+Backend+Storage.pdf).
+5. Terraform Remote State - [Enhanced Backend](implement-and-maintain-state/Terraform+Remote+State+Enhanced+Backend.pdf).
+6. Terraform State [Migration](implement-and-maintain-state/Terraform+State+Migration.pdf).
+7. Terraform State [Refresh](implement-and-maintain-state/Terraform+State+Refresh.pdf).
+8. Terraform Backend [Configuration](implement-and-maintain-state/Terraform+Backend+Configuration.pdf).
+9. [Sensitive Data](implement-and-maintain-state/Sensitive+Data+in+Terraform+State.pdf) in Terraform State. 
+
+<br>
+
+<hr style="height:4px;background:black">
+
+<br>
+
+## 
