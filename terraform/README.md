@@ -7,7 +7,7 @@
   - [Interact with Terraform Modules](#interact-with-terraform-modules)
   - [Use the Core Terraform Workflow.](#use-the-core-terraform-workflow)
   - [Implement and Maintain State](#implement-and-maintain-state)
-  - [](#)
+  - [Read, Generate, and Modify Configuration](#read-generate-and-modify-configuration)
 
 <br>
 
@@ -136,4 +136,5 @@ Documentation:
 
 <br>
 
-## 
+## Read, Generate, and Modify Configuration
+1. 
