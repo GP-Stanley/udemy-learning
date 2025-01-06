@@ -8,6 +8,7 @@
   - [Use the Core Terraform Workflow.](#use-the-core-terraform-workflow)
   - [Implement and Maintain State](#implement-and-maintain-state)
   - [Read, Generate, and Modify Configuration](#read-generate-and-modify-configuration)
+  - [Understand HCP Terraform (Terraform Cloud) Capabilities](#understand-hcp-terraform-terraform-cloud-capabilities)
 
 <br>
 
@@ -137,4 +138,23 @@ Documentation:
 <br>
 
 ## Read, Generate, and Modify Configuration
+1. [Local Variables](documentation/configuration/Terraform+Local+Values.pdf).
+2. [Input Variables](documentation/configuration/Terraform+Variables.pdf).
+3. Terraform [Outputs](documentation/configuration/Terraform+Outputs.pdf).
+4. Variable [Validation and Suppression](documentation/configuration/Variable+Validation+and+Suppression.pdf).
+5. [Secure Secrets](documentation/configuration/Secure+Secrets+in+Terraform+Code.pdf) in Terraform Code.
+6. Variable [Collection and Structure](documentation/configuration/Terraform+Collections+and+Types.pdf) Types.
+7. Working with [Data Blocks](documentation/configuration/Working+with+Data+Blocks.pdf).
+8. Terraform [Built-in](documentation/configuration/Terraform+Built-in+Functions.pdf) Functions.
+9. [Dynamic Blocks](documentation/configuration/Terraform+Dynamic+Blocks.pdf).
+10. Terraform [Graph](documentation/configuration/Terraform+Graph.pdf).
+11. Terraform [Resource Lifecycles](documentation/configuration/Terraform+Lifecycle+Rules.pdf).
+
+<br>
+
+<hr style="height:4px;background:black">
+
+<br>
+
+## Understand HCP Terraform (Terraform Cloud) Capabilities
 1. 
