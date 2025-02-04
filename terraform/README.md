@@ -2,14 +2,15 @@
   - [HashiCorp Certified: Terraform Associate 2024](#hashicorp-certified-terraform-associate-2024)
     - [HashiCorp Exam Preparation Practice Test](#hashicorp-exam-preparation-practice-test)
   - [HashiCorp Certified: Terraform Associate - Hands-On Labs](#hashicorp-certified-terraform-associate---hands-on-labs)
-  - [Understanding the Terraform Basics](#understanding-the-terraform-basics)
-  - [Use Terraform Outside of Core Workflow](#use-terraform-outside-of-core-workflow)
-  - [Interact with Terraform Modules](#interact-with-terraform-modules)
-  - [Use the Core Terraform Workflow.](#use-the-core-terraform-workflow)
-  - [Implement and Maintain State](#implement-and-maintain-state)
-  - [Read, Generate, and Modify Configuration](#read-generate-and-modify-configuration)
-  - [Understand HCP Terraform (Terraform Cloud) Capabilities](#understand-hcp-terraform-terraform-cloud-capabilities)
-  - [Additional Terraform Labs](#additional-terraform-labs)
+  - [Documentation](#documentation)
+    - [Understanding the Terraform Basics](#understanding-the-terraform-basics)
+    - [Use Terraform Outside of Core Workflow](#use-terraform-outside-of-core-workflow)
+    - [Interact with Terraform Modules](#interact-with-terraform-modules)
+    - [Use the Core Terraform Workflow.](#use-the-core-terraform-workflow)
+    - [Implement and Maintain State](#implement-and-maintain-state)
+    - [Read, Generate, and Modify Configuration](#read-generate-and-modify-configuration)
+    - [Understand HCP Terraform (Terraform Cloud) Capabilities](#understand-hcp-terraform-terraform-cloud-capabilities)
+    - [Additional Terraform Labs](#additional-terraform-labs)
   - [Exam Tips](#exam-tips)
   - [](#)
 
@@ -56,7 +57,9 @@ Documentation:
 
 <br>
 
-## Understanding the Terraform Basics
+## Documentation
+
+### Understanding the Terraform Basics
 1. Terraform [Basics](documentation/basics-docs/Terraform+Basics.pdf). 
 2. HashiCorp Configuration Language ([HCL](documentation/basics-docs/HashiCorp+Configuration+Language.pdf)).
 3. Terraform [Plub-in Based Architecture](documentation/basics-docs/Terraform+Plugin+Based+Architecture.pdf). 
@@ -81,7 +84,7 @@ Documentation:
 
 <br>
 
-## Use Terraform Outside of Core Workflow
+### Use Terraform Outside of Core Workflow
 1. [Auto Formatting](documentation/outside-core-workflow-docs/Auto+Formatting+Terraform+Code.pdf) Terraform Code.
 2. Replace Resources using [Terraform Taint](documentation/outside-core-workflow-docs/Terraform+Taint+and+Replace.pdf).
 3. Terraform [Import](documentation/outside-core-workflow-docs/Terraform+Import.pdf).
@@ -95,8 +98,8 @@ Documentation:
 
 <br>
 
-## Interact with Terraform Modules
-1. Terraform [Modules](documentation/modules-docs/Terraform+Modules.pdf).
+### Interact with Terraform Modules
+Terraform [Modules](documentation/modules-docs/Terraform+Modules.pdf).
    * [Sources](documentation/modules-docs/Terraform+Modules+Sources.pdf).
    * [Inputs and Outputs](documentation/modules-docs/Terraform+Module+Inputs+and+Outputs.pdf). 
    * [Scope](documentation/modules-docs/Terraform+Module+Scope.pdf).
@@ -109,7 +112,7 @@ Documentation:
 
 <br>
 
-## Use the Core Terraform Workflow.
+### Use the Core Terraform Workflow.
 1. Understanding the Terraform [Workflow](documentation/core-docs/Terraform+Workflow.pdf).
 2. Initialising Terraform with the '[terraform init](documentation/core-docs/Terraform+Init.pdf)' command.
 3. Validating Terraform Configuration with '[terraform validate](documentation/core-docs/Validating+Terraform+Configuration.pdf)'.
@@ -123,7 +126,7 @@ Documentation:
 
 <br>
 
-## Implement and Maintain State
+### Implement and Maintain State
 1. Terraform State - [Default Local Backend](documentation/implement-and-maintain-state/Terraform+State+Default+Local+Backend.pdf).
 2. Terraform State [Locking](documentation/implement-and-maintain-state/Terraform+State+Locking.pdf). 
 3. Terraform State - [Backend Authentication](documentation/implement-and-maintain-state/Terraform+State+Backend+Authentication.pdf).
@@ -140,7 +143,7 @@ Documentation:
 
 <br>
 
-## Read, Generate, and Modify Configuration
+### Read, Generate, and Modify Configuration
 1. [Local Variables](documentation/configuration/Terraform+Local+Values.pdf).
 2. [Input Variables](documentation/configuration/Terraform+Variables.pdf).
 3. Terraform [Outputs](documentation/configuration/Terraform+Outputs.pdf).
@@ -159,7 +162,7 @@ Documentation:
 
 <br>
 
-## Understand HCP Terraform (Terraform Cloud) Capabilities
+### Understand HCP Terraform (Terraform Cloud) Capabilities
 1. HCP Terraform - [Getting Started](documentation/hcp-capabilities/Terraform+Cloud+Getting+Started.pdf).
 2. HCP Terraform - [Remote State](documentation/hcp-capabilities/Terraform+Remote+State+Enhanced+Backend.pdf).
 3. HCP Terraform - [Workspaces](documentation/hcp-capabilities/Terraform+Cloud+Workspaces.pdf).
@@ -175,7 +178,7 @@ Documentation:
 
 <br>
 
-## Additional Terraform Labs
+### Additional Terraform Labs
 1. Extending Terraform - [Non-Cloud Providers](documentation/tf-labs/Extra-Extending+Terraform+Non+Cloud+Providers.pdf).
 2. Terraform [Auto Complete](documentation/tf-labs/Extra-Terraform+AutoComplete.pdf).
 3. AWS [Multi-Region Provider Aliasing](documentation/tf-labs/Extra-Terraform+AWS+Provider+-+Multi-Region+and+Alias.pdf).
